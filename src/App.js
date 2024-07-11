@@ -2,10 +2,9 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "./logo.png";
 
-
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 
 import { Cart } from "./Components/Cart/Cart";
@@ -18,13 +17,11 @@ import { Logout } from "./Components/Logout/Logout";
 import { useAuth0 } from "@auth0/auth0-react";
 import Account from "./Components/Profile/Account";
 
-
 function App() {
   const [isOpen, setOpen] = useState();
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const { isLoading } = useAuth0();
   if (isLoading) return <h4>Loading...</h4>;
-  
 
   return (
     <Router>
@@ -47,9 +44,6 @@ function App() {
         <Link to="/contacts" className="nav_link">
           Contacts
         </Link>
-        <Link to="/" className="nav_link">
-          Log In
-        </Link>
         <Login />
         <Logout />
         <div>
@@ -69,7 +63,9 @@ function App() {
           </Link>
         </div>
       </nav>
-      <button className="header_menu-button" onClick={() => setOpen(!isOpen)}>CLICK</button>
+      <button className="header_menu-button" onClick={() => setOpen(!isOpen)}>
+        CLICK
+      </button>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
@@ -83,46 +79,3 @@ function App() {
 }
 
 export default App;
-
-//         {/* <ul className="header_nav-list">
-//             <li className="header_nav-item">Home</li>
-//             <li className="header_nav-item">Catalog</li>
-//             <li className="header_nav-item">About us</li>
-//             <li className="header_nav-item">Contacts</li>
-//             <li className="header_nav-item">Log In</li>
-//             <li className="header_nav-item">Cart</li>
-//         </ul> */}
-//     {/* </nav> */}
-//     {/*  */}
-// {/* </header> */}
-
-//   
-//   return <Router>
-//     <header className="header">
-// <img src={`${logo}`} className='header_logo' alt="logo" />
-// <nav  >
-
-//             <Link to='/' className="header_nav-item">Home</Link>
-//             <Link to='/catalog' className="header_nav-item">Catalog</Link>
-//             <Link to='/about' className="header_nav-item">About</Link>
-//             <Link to='/contacts' className="header_nav-item">Contacts</Link>
-//     </nav>
-//           <Routes>
-//             <Route path='/' element={<Home />} />
-//             <Route path='/catalog' element={<Catalog />} />
-//             <Route path='/about' element={<About />} />
-//             <Route path='/contacts' element={<Contacts />} />
-//           </Routes>
-//           <button className="header_menu-button" onClick={() => setOpen(!isOpen)}>{burger}
-//             </button>
-//          </header>
-//                  {/* <ul className="header_nav-list">
-// //                     <li className="header_nav-item">Home</li>
-// //                     <li className="header_nav-item">Catalog</li>
-// //                     <li className="header_nav-item">About us</li>
-// //                     <li className="header_nav-item">Contacts</li>
-// //                     <li className="header_nav-item">Log In</li>
-// //                     <li className="header_nav-item">Cart</li>
-// //                 </ul> */}
-
-//     </Router>

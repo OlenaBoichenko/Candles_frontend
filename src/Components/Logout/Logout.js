@@ -5,9 +5,10 @@ export const Logout = () => {
     const { logout, isAuthenticated } = useAuth0();
     return ( 
         isAuthenticated&&(
-        <div>
+        <div className="nav_link">
             <button onClick={() => logout()}>Log Out</button>
         </div>
      ));
 }
+ 
  

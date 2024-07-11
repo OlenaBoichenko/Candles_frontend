@@ -8,14 +8,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
 
-import productsReducer, { productsFetch } from './features/productsSlice';
+import candleReducer, { candleFetch } from './features/productsSlice';
 import { productsApi } from './features/productsApi';
 import cartReducer, { getTotals } from './features/cartSlice';
 
 
 const store = configureStore({
   reducer:{
-    products: productsReducer,
+    candle: candleReducer,
     cart: cartReducer,
     [productsApi.reducerPath]: productsApi.reducer,
   },
@@ -24,7 +24,7 @@ const store = configureStore({
   },
 });
 
-store.dispatch(productsFetch());
+store.dispatch(candleFetch());// from productsSlice
 store.dispatch(getTotals());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -43,6 +43,7 @@ root.render(
     </Auth0Provider>
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
