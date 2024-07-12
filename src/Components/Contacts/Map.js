@@ -6,7 +6,7 @@ const containerStyle = {
   height: "300px",
 };
 
-const Map = ({center}) => {
+const Map = ({ center }) => {
   const mapRef = React.useRef(undefined);
 
   const onLoad = React.useCallback(function callback(map) {
@@ -25,10 +25,7 @@ const Map = ({center}) => {
         zoom={10}
         onLoad={onLoad}
         onUnmount={onUnmount}
-      >
-        {/* Child components, such as markers, info windows, etc. */}
-        <></>
-      </GoogleMap>
+      ></GoogleMap>
     </div>
   );
 };
