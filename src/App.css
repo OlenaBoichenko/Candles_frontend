@@ -69,19 +69,6 @@ a {
   cursor: pointer;
 }
 
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0 30px 30px 0;
-  height: 80px;
-  background-color: #e76712;
-  z-index: 1;
-}
-
 .header_logo {
   width: 80px;
 }
@@ -90,19 +77,10 @@ a {
   margin-left: auto;
 }
 
-.header_nav-list {
-  display: flex;
-  list-style-type: none;
-}
-
 .header_nav-item {
   font-size: 20px;
   line-height: 1;
   color: #fff;
-}
-
-.header_nav-item:nth-child(n + 2) {
-  margin: 0 10px 0 10px;
 }
 
 .header_menu-button {
@@ -118,19 +96,28 @@ a {
   align-items: center;
 }
 
-h1 {
+.container h1 {
+  
   letter-spacing: 15px;
   color: #963f06;
 }
 
-h3 {
+.container h3 {
+  margin-top: 30px;
   color: #ad6535;
 }
 
 h4 {
-  font-size: 40px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
+}
+
+.choose_btn {
+  position: absolute;
+  top: 400px;
+  text-align: center;
+  width: 100%;
 }
 
 .choose_btn button {
@@ -142,13 +129,6 @@ h4 {
   font-weight: 500;
   font-size: 25px;
   padding: 20px 50px 20px 50px;
-}
-
-.choose_btn {
-  position: absolute;
-  top: 400px;
-  text-align: center;
-  width: 100%;
 }
 
 .choose_btn button:hover {
@@ -185,7 +165,6 @@ h4 {
 
 .candle_block img:hover {
   transform: scale(1.1);
-
 }
 
 .candle_block button {
@@ -229,7 +208,6 @@ h4 {
 
 .brand_des {
   display: flex;
-    
     flex-direction: column;
     max-width: 100%;
     align-items: center;
@@ -258,6 +236,118 @@ h4 {
   color: #ffffff;
   background-color: #e76712;
 }
+
+.team {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+
+.face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.face p {
+  margin-top: 10px;
+}
+
+.face:last-child {
+  margin-right: 20px;
+}
+
+.face img {
+  width: 200px;
+}
+
+.container_about h1 {
+  text-align: center;
+  letter-spacing: 15px;
+  color: #963f06;
+  margin-top: 30px;
+}
+
+.container_about h3 {
+  color: #963f06;
+  font-size: 25px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+
+.about_img {
+  margin-right: 30px;
+}
+
+.about li {
+  list-style: none;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.about img {
+  max-width: 100%;
+}
+
+.container_contacts {
+  max-width: 100%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.container_contacts h1 {
+  text-align: center;
+  letter-spacing: 15px;
+  color: #963f06;
+  margin: 30px 0 30px 0;
+}
+
+.container_contacts p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.email,.phone {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.container_contacts span {
+  color: #105eee;
+}
+.email h3,
+.phone h3 {
+  margin-right: 20px;
+}
+
+.email p,
+.phone p {
+  font-size: 18px;
+}
+
+.map {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.map li {
+  list-style: none;
+}
+
+
+
+
+
+
 
 .modal {
   height: 100vh;
@@ -471,6 +561,8 @@ h4 {
   flex-direction: column;
   align-items: center;
 }
+
+
 
 @media (max-width: 703px) {
   .logo {

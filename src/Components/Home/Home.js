@@ -3,6 +3,10 @@ import { Fade } from "react-awesome-reveal";
 import { Items } from "../../Items";
 
 import brand from "../../images/brand.png";
+import aleksandra from "../../images/aleksandra.png";
+import christian from "../../images/christian.png";
+import courtney from "../../images/courtney.png";
+import vinicius from "../../images/vinicius.png";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -25,7 +29,7 @@ export const Home = () => {
       </div>
       <div>
         <div className="brand">
-          <h2>About Brand</h2>
+          <h2>Our Brand</h2>
         </div>
         <div className="brand_image">
           <Fade cascade damping={1} direction="left">
@@ -45,6 +49,29 @@ export const Home = () => {
                 your condition.
               </p>
               <button onClick={() => goToCatalog()}>Your Choice</button>
+            </div>
+          </Fade>
+        </div>
+        <div className="brand">
+          <h2>Our Team</h2>
+        </div>
+        <div className="team">
+          <Fade cascade damping={0.7}>
+            <div className="face">
+            <img src={aleksandra} alt="face" />
+            <p>Aleksandra - CEO</p>
+            </div>
+            <div className="face">
+            <img src={christian} alt="face" />
+            <p>Christian - designer</p>
+            </div>
+            <div className="face">
+            <img src={courtney} alt="face" />
+            <p>Courtney - creator</p>
+            </div>
+            <div className="face">
+            <img src={vinicius} alt="face" />
+            <p>Vinicius - inspirer</p>
             </div>
           </Fade>
         </div>

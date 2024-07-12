@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const candleFetch = createAsyncThunk("candle/candleFetch", async () => {
-  const response = await axios.get("https://candle-beauty.onrender.com");
+  const response = await axios.get("https://candles-backend.onrender.com");
   return response?.data;
 });
 
