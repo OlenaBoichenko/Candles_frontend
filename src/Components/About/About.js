@@ -1,4 +1,5 @@
 import about from "../../images/about.jpg";
+import { Footer } from "../Footer/Footer";
 
 export const About = () => {
   return (
@@ -36,6 +37,8 @@ export const About = () => {
           </ul>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

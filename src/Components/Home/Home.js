@@ -7,6 +7,7 @@ import aleksandra from "../../images/aleksandra.png";
 import christian from "../../images/christian.png";
 import courtney from "../../images/courtney.png";
 import vinicius from "../../images/vinicius.png";
+import { Footer } from "../Footer/Footer";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -80,6 +81,8 @@ export const Home = () => {
       <Items />
 
       <button onClick={() => goToCatalog()}>Would you like to see more</button>
+
+      <Footer />
     </div>
   );
 };

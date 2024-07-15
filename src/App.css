@@ -97,7 +97,6 @@ a {
 }
 
 .container h1 {
-  
   letter-spacing: 15px;
   color: #963f06;
 }
@@ -185,7 +184,7 @@ h4 {
   background-color: #e76712;
 }
 
-.brand{
+.brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,10 +207,10 @@ h4 {
 
 .brand_des {
   display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    align-items: center;
-    margin: 30px;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+  margin: 30px;
 }
 
 .brand_des p {
@@ -300,6 +299,7 @@ h4 {
   max-width: 100%;
   width: 70%;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 .container_contacts h1 {
@@ -314,7 +314,8 @@ h4 {
   text-align: justify;
 }
 
-.email,.phone {
+.email,
+.phone {
   display: flex;
   align-items: center;
   margin: 20px 0 20px 0;
@@ -342,12 +343,6 @@ h4 {
 .map li {
   list-style: none;
 }
-
-
-
-
-
-
 
 .modal {
   height: 100vh;
@@ -562,7 +557,101 @@ h4 {
   align-items: center;
 }
 
+.check_out_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+height: 500px;
+}
 
+.check_out_form h1 {
+  letter-spacing: 15px;
+  color: #963f06;
+  margin-bottom: 20px;
+}
+
+iframe {
+  height: 70px;
+}
+
+.StripeElement {
+  padding: 50px 20px;
+  border: 1px solid;
+}
+
+form {
+  width: 400px;
+  height: 200px;
+  border: 2px solid #ad6535;
+  background-color: #fff
+
+}
+
+form button {
+  width: 100%;
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  color: #963f06;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: cursive;
+  letter-spacing: 3px;
+}
+
+
+.footer {
+  height: 300px;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 50px;
+  background-color: #e76712;
+}
+
+.footer h3 {
+  color: #fff;
+  text-align: center;
+}
+
+.footer li {
+  list-style: none;
+  padding: 20px 20px 10px 0;
+  text-align: center;
+}
+
+.footer li span {
+  font-weight: bolder;
+}
+
+.footer p {
+  padding: 20px 30px 10px 0;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-icons a {
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
 
 @media (max-width: 703px) {
   .logo {

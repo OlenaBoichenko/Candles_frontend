@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   addToCart,
   clearCart,
@@ -8,7 +8,8 @@ import {
   getTotals,
   removeFromCart,
 } from "../../features/cartSlice";
-import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 export const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -34,7 +35,12 @@ export const Cart = () => {
     dispatch(clearCart());
   };
 
-  const { loginWithRedirect } = useAuth0();
+  const navigate = useNavigate();
+  const goToPayment = () => {
+    navigate("/checkout");
+    window.scrollTo(0, 0);
+  };
+
 
   return (
     <div className="cart_container">
@@ -71,7 +77,7 @@ export const Cart = () => {
           </div>
           <div className="cart_items">
             {cart.cartItems?.map((cartItem) => (
-              <div key={cartItem.id} className="cart_item">
+              <div key={cartItem._id} className="cart_item">
                 <div className="cart_product">
                   <img src={cartItem.img} alt="candle" />
                   <div>
@@ -107,7 +113,7 @@ export const Cart = () => {
                 <span className="amount">$ {cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculeted at checkout</p>
-              <button onClick={() => loginWithRedirect()}>Check out</button>
+              <button onClick={() => goToPayment()}>Check out</button>
               <div className="continue_shopping">
                 <Link to="/catalog">
                   <svg
