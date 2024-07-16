@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from "axios";
 
@@ -8,36 +8,40 @@ export const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const [messageSuccess, setMessageSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (!stripe) {
+      return;
+    }
+  });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!stripe || !elements) {
+      return;
+    }
+
+    setIsLoading(true);
+
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardElement),
     });
 
     if (!error) {
-      console.log("Stripe 23 | token generated!", paymentMethod);
-      try {
-        const { id } = paymentMethod;
-        const response = await axios.post(
-          "https://candles-stripe-1.onrender.com/",
-          {
-            amount: 999,
-            id: id,
-          }
-        );
-
-        console.log("Stripe 35 | data", response.data.success);
-        if (response.data.success) {
-          console.log("CheckoutForm.js 25 | payment successful!");
-          setMessageSuccess(true);
+      const { id } = paymentMethod;
+      const response = await axios.post(
+        "https://candles-stripe-1.onrender.com/",
+        {
+          amount: 999,
+          id: id,
         }
-      } catch (error) {
-        console.log("CheckoutForm.js 28 | ", error);
+      );
+      if (response.data.success) {
+        setMessageSuccess(true);
       }
-    } else {
-      console.log(error.message);
     }
   };
 
@@ -48,7 +52,15 @@ export const CheckoutForm = () => {
         {!messageSuccess ? (
           <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
             <CardElement />
-            <button>Pay</button>
+            <button disabled={isLoading || !stripe || !elements} id="submit">
+              <span id="button-text">
+                {isLoading ? (
+                  <div className="spinner" id="spinner"></div>
+                ) : (
+                  "Pay now"
+                )}
+              </span>
+            </button>
           </form>
         ) : (
           <div>
