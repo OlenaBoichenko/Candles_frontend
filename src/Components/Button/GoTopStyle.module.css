@@ -1,0 +1,19 @@
+.goTop {
+  position: fixed;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  bottom: 50px;
+  right: 50px;
+  margin-right: -30px;
+  cursor: pointer;
+}
+
+.goTop:hover {
+  background-color: #e76712;
+  border-radius: 50%;
+}
+
+.goTopHidden {
+  display: none;
+}

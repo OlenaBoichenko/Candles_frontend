@@ -17,9 +17,11 @@ import { Logout } from "./Components/Logout/Logout";
 import { useAuth0 } from "@auth0/auth0-react";
 import Account from "./Components/Profile/Account";
 import Stripe from "./Components/Stripe/StripeContainer";
+import { GoTopButton } from "./Components/Button/GoTopButton";
 
 function App() {
   const [isOpen, setOpen] = useState();
+
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const { isLoading } = useAuth0();
   if (isLoading) return <h4>Loading...</h4>;
@@ -63,10 +65,15 @@ function App() {
             </span>
           </Link>
         </div>
+        <button className="header_menu-button" onClick={() => setOpen(!isOpen)}>
+          CLICK
+        </button>
       </nav>
-      <button className="header_menu-button" onClick={() => setOpen(!isOpen)}>
-        CLICK
-      </button>
+
+      <div>
+        <GoTopButton />
+      </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />

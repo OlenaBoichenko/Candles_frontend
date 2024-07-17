@@ -19,11 +19,11 @@ export const Items = () => {
   const [modalActive, setModalActive] = useState();
 
   return (
-    <div className="">
+    <div>
       {isLoading ? (
         <p>Loading...</p>
       ) : error ? (
-        <p>An error occured</p>
+        <p className="info">An error occured</p>
       ) : (
         <>
           <h2>FRAGRANCES for HOME</h2>
@@ -42,23 +42,20 @@ export const Items = () => {
             ))}
           </div>
           <Modal active={modalActive} setActive={setModalActive}>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, autem ullam. Iusto illum ratione explicabo consequuntur alias, libero quam magni amet quis et corporis culpa sint ipsa vero deleniti earum?
-            Ex reiciendis voluptate totam necessitatibus dolore libero velit incidllam, in voluptatem hic, nisi blanditiis voluptates ipsum autem nam!
-            Sequi, placeat! Dolor illo laboriosam sapiente reiciendis mollitia officia harum delectus et officiis ad magnam beatae dolore magni consectetur voluptatibus, libero a! Odio eveniet delectus necessitatibus consectetur, autem totam animi?
-            Iure adipisci necessitatibus obcaecati, suscipit ex quidem molestias est? Nesciunt necessitatibus itaque unde fuga nulla odit eius id dicta, praesentium omnis ipsum dolore in nisi explicabo </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Provident, autem ullam. Iusto illum ratione explicabo consequuntur
+              alias, libero quam magni amet quis et corporis culpa sint ipsa
+              vero deleniti earum? Ex reiciendis voluptate totam necessitatibus
+              dolore libero velit incidllam, in voluptatem hic, nisi blanditiis
+              voluptates ipsum autem nam!
+            </p>
           </Modal>
         </>
       )}
     </div>
   );
 };
-
-
-
-
-
-
-
 
 // export const Header = () => {
 //     // const [isOpen, setOpen] = useState();

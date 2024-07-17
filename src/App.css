@@ -40,6 +40,7 @@ a {
   border-radius: 50%;
   background-color: #f3c578;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .nav_link {
@@ -133,6 +134,12 @@ h4 {
 .choose_btn button:hover {
   color: #ffffff;
   background-color: #e76712;
+}
+
+.info {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .container_candles {
