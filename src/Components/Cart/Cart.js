@@ -10,7 +10,6 @@ import {
 } from "../../features/cartSlice";
 
 
-
 export const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -40,7 +39,6 @@ export const Cart = () => {
     navigate("/checkout");
     window.scrollTo(0, 0);
   };
-
 
   return (
     <div className="cart_container">

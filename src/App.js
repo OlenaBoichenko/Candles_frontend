@@ -15,7 +15,6 @@ import { Home } from "./Components/Home/Home";
 import { Login } from "./Components/LogIn/Login";
 import { Logout } from "./Components/Logout/Logout";
 import { useAuth0 } from "@auth0/auth0-react";
-import Account from "./Components/Profile/Account";
 import Stripe from "./Components/Stripe/StripeContainer";
 import { GoTopButton } from "./Components/Button/GoTopButton";
 
@@ -80,7 +79,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/account" element={<Account />} />
         <Route path="/checkout" element={<Stripe />} />
       </Routes>
     </Router>
