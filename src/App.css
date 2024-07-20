@@ -867,6 +867,13 @@ ul a {
     line-height: 25px;
   }
 
+  @media (max-width: 600px) {
+    .cart_items {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   @media (max-width: 500px) {
     .title {
       font-size: 25px;
@@ -874,6 +881,19 @@ ul a {
 
     .container_candles {
       display: block;
+    }
+
+    .cart_container .titles {
+      display: none;
+    }
+
+    .cart_item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart_summary {
+      flex-direction: column;
     }
   }
 }
