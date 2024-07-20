@@ -1,6 +1,7 @@
 import { useJsApiLoader } from "@react-google-maps/api";
 import Map from "./Map";
 import { Footer } from "../Footer/Footer";
+import { MenuButton } from "../Button/MenuButton";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -16,6 +17,7 @@ export const Contacts = () => {
   });
   return (
     <div>
+      <MenuButton />
       <div className="container_contacts">
         <h1>Contact Us</h1>
         <p>
@@ -39,7 +41,7 @@ export const Contacts = () => {
         </div>
         <div className="map">
           {isLoaded ? <Map center={defaultCenter} /> : <h4>Loading...</h4>}
-          <div>
+          <div className="mail">
             <h3>Mailing Address:</h3>
             <ul>
               <li>Candles Home</li>

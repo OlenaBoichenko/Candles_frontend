@@ -1,9 +1,11 @@
 import about from "../../images/about.jpg";
+import { MenuButton } from "../Button/MenuButton";
 import { Footer } from "../Footer/Footer";
 
 export const About = () => {
   return (
     <div className="container_about">
+      <MenuButton />
       <h1>About Us</h1>
       <div className="about">
         <div className="about_img">

@@ -3,6 +3,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from "axios";
 
 import { Footer } from "../Footer/Footer";
+import { MenuButton } from "../Button/MenuButton";
 
 export const CheckoutForm = () => {
   const stripe = useStripe();
@@ -47,6 +48,7 @@ export const CheckoutForm = () => {
 
   return (
     <div>
+      <MenuButton />
       <div className="check_out_form">
         <h1>CheckOut</h1>
         {!messageSuccess ? (

@@ -2,8 +2,8 @@ import { GoogleMap } from "@react-google-maps/api";
 import React from "react";
 
 const containerStyle = {
-  width: "600px",
-  height: "300px",
+  width: "80%",
+  height: "90%",
 };
 
 const Map = ({ center }) => {
@@ -18,7 +18,7 @@ const Map = ({ center }) => {
   }, []);
 
   return (
-    <div>
+    <div className="google">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}

@@ -12,6 +12,15 @@
   z-index: -1;
 }
 
+.menu_button {
+  display: none;
+}
+
+.menu_button button {
+  background-color: transparent;
+  border: none;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -44,7 +53,7 @@ a {
 }
 
 .nav_link {
-  padding: 10px 40px;
+  padding: 5px 15px;
   text-decoration: none;
   font-size: 20px;
   line-height: 1;
@@ -78,12 +87,6 @@ a {
   margin-left: auto;
 }
 
-.header_nav-item {
-  font-size: 20px;
-  line-height: 1;
-  color: #fff;
-}
-
 .header_menu-button {
   display: none;
   cursor: pointer;
@@ -95,6 +98,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .container h1 {
@@ -132,7 +136,7 @@ h4 {
   padding: 20px 50px 20px 50px;
 }
 
-.choose_btn button:hover, 
+.choose_btn button:hover,
 .btn_to_catalog:hover {
   color: #ffffff;
   background-color: #e76712;
@@ -145,12 +149,12 @@ h4 {
 }
 
 .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-    color: #963f06;
-    font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  color: #963f06;
+  font-size: 35px;
 }
 
 .container_candles {
@@ -366,12 +370,18 @@ h4 {
 
 .map {
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-around;
 }
 
 .map li {
   list-style: none;
+}
+
+.google {
+  width: 600px;
+  height: 300px;
 }
 
 .modal {
@@ -535,6 +545,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .cart_checkout .subtotal .amount {
@@ -631,11 +642,8 @@ form button {
 }
 
 .footer {
-  height: 300px;
-  max-height: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   padding: 50px;
@@ -676,7 +684,7 @@ form button {
   transform: scale(1.2);
 }
 
-a {
+ul a {
   color: #000;
   text-decoration: underline;
 }
@@ -744,10 +752,20 @@ a {
   }
 }
 
-@media (max-width: 703px) {
+@media (max-width: 850px) {
   .logo {
     flex: none;
   }
+
+  .menu_button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav_link {
+    padding: 15px 0;
+  }
+
   .header_nav {
     position: fixed;
     top: 0;
@@ -777,13 +795,6 @@ a {
     padding-left: 50px;
   }
 
-  .header_nav-item {
-    margin: 10px 0;
-    color: #e76712;
-    font-weight: 500;
-    padding: 0 0 20px 0;
-  }
-
   .header_nav-item:nth-child(n + 2) {
     margin-left: 0;
   }
@@ -793,5 +804,76 @@ a {
     margin-left: auto;
     border: 0;
     background-color: transparent;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .container_contacts h1 {
+    letter-spacing: 7px;
+  }
+
+  .container_contacts p {
+    font-size: 17px;
+  }
+
+  .email,
+  .phone {
+    flex-direction: column;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+
+  .footer h3 {
+    margin-top: 5px;
+  }
+
+  .brand_image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .container_about h3 {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .map {
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+  }
+
+  .mail {
+    text-align: center;
+    line-height: 25px;
+  }
+
+  @media (max-width: 500px) {
+    .title {
+      font-size: 25px;
+    }
+
+    .container_candles {
+      display: block;
+    }
   }
 }

@@ -7,6 +7,7 @@ import christian from "../../images/christian.png";
 import courtney from "../../images/courtney.png";
 import vinicius from "../../images/vinicius.png";
 import { Footer } from "../Footer/Footer";
+import { MenuButton } from "../Button/MenuButton";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ export const Home = () => {
   return (
     <div>
       <div className="back">
+        <MenuButton />
         <div className="container">
           <h1>SCENTED CANDELS</h1>
           <h3>Handmade with fragrances from France</h3>

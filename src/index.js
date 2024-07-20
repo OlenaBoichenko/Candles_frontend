@@ -22,7 +22,7 @@ const store = configureStore({
   },
 });
 
-store.dispatch(candleFetch()); // from productsSlice
+store.dispatch(candleFetch()); 
 store.dispatch(getTotals());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
