@@ -16,7 +16,7 @@ export const Items = () => {
     navigate("/cart");
   };
 
-  const [modalActive, setModalActive] = useState();
+  const [modalActive, setModalActive] = useState(false);
 
   return (
     <div>

@@ -42,12 +42,16 @@ export const Footer = () => {
       <div>
         <h3>Customer Service</h3>
         <ul>
-          <a href="https://www.privacypolicies.com/live/07e81a53-fd9a-4c8c-9858-ebeda93be437">
-            <li>Privacy Policy</li>
-          </a>
-          <a href="https://www.termsfeed.com/live/b472208b-9f57-41e1-824a-fbed12092201">
-            <li>Terms of Service</li>
-          </a>
+          <li>
+            <a href="https://www.privacypolicies.com/live/07e81a53-fd9a-4c8c-9858-ebeda93be437">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="https://www.termsfeed.com/live/b472208b-9f57-41e1-824a-fbed12092201">
+              Terms of Service
+            </a>
+          </li>
         </ul>
       </div>
     </div>
