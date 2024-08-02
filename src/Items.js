@@ -5,6 +5,7 @@ import { useGetAllProductsQuery } from "./features/productsApi";
 import { addToCart } from "./features/cartSlice";
 
 import Modal from "./Components/Modal/Modal";
+import { Loader } from "./Loader";
 
 export const Items = () => {
   const { data, error, isLoading } = useGetAllProductsQuery();
@@ -21,7 +22,10 @@ export const Items = () => {
   return (
     <div>
       {isLoading ? (
-        <p>Loading...</p>
+        <div className="lds-container">
+          <p>Just a sec. Items is loading...</p>
+        <Loader />
+        </div>
       ) : error ? (
         <p className="info">An error occured</p>
       ) : (

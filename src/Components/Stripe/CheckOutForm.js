@@ -4,6 +4,7 @@ import axios from "axios";
 
 import { Footer } from "../Footer/Footer";
 import { MenuButton } from "../Button/MenuButton";
+import { Loader } from "../../Loader";
 
 export const CheckoutForm = () => {
   const stripe = useStripe();
@@ -55,13 +56,7 @@ export const CheckoutForm = () => {
           <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
             <CardElement />
             <button disabled={isLoading || !stripe || !elements} id="submit">
-              <span id="button-text">
-                {isLoading ? (
-                  <div className="spinner" id="spinner"></div>
-                ) : (
-                  "Pay now"
-                )}
-              </span>
+              <span id="button-text">{isLoading ? <Loader /> : "Pay now"}</span>
             </button>
           </form>
         ) : (
