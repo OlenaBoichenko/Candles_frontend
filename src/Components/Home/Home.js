@@ -22,7 +22,7 @@ export const Home = () => {
       <div className="back">
         <MenuButton />
         <div className="container">
-          <h1>SCENTED CANDELS</h1>
+          <h1>SCENTED CANDLES</h1>
           <h3>Handmade with fragrances from France</h3>
         </div>
       </div>

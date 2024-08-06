@@ -29,7 +29,7 @@ export const Contacts = () => {
           <h3>Email:</h3>
           <p>
             For general inquiries and customer support, please email us at{" "}
-            <span>support@candelshome.netlify.app</span>
+            <span>support@candleshome.netlify.app</span>
           </p>
         </div>
         <div className="phone">

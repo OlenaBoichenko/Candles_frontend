@@ -7,7 +7,7 @@ export const Footer = () => {
       <div>
         <h3>About Us</h3>
         <p>
-          At Candel's Home, we create premium aromatic candles designed to
+          At Candle's Home, we create premium aromatic candles designed to
           elevate your living space with delightful fragrances. Our candles are
           handcrafted with the finest ingredients, ensuring a long-lasting and
           enjoyable experience.
@@ -17,7 +17,7 @@ export const Footer = () => {
         <h3>Contact Us</h3>
         <ul>
           <li>
-            <span>Email:</span> support@candelshome.app
+            <span>Email:</span> support@candleshome.app
           </li>
           <li>
             <span>Phone:</span> +1 (123) 456-7890
