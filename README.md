@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Candles project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+This is a pet project consisting of three main parts:
+1. [Frontend](https://github.com/OlenaBoichenko/Candles_frontend) is responsible for the user interface.
+2. [Backend](https://github.com/OlenaBoichenko/Candles_backend) - the server part for query processing and database management.
+3. [Stripe](https://github.com/OlenaBoichenko/Candles_stripe) - the integration of a payment system for processing purchases.
 
-In the project directory, you can run:
+The project is deployed using Netlify and includes both visual elements and full functionality for interacting with users and processing payments.
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Frontend: React, HTML, CSS, JavaScript
+- Backend: Node.js, Express, MongoDB
+- Stripe: Stripe API for payment processing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Running a project locally
 
-### `npm test`
+1. **Frontend**  
+   1.1 Clone the frontend repository:  
+       `git clone https://github.com/OlenaBoichenko/Candles_frontend`  
+   1.2 Go to your project folder:  
+       `cd candles_frontend`  
+   1.3 Install dependencies:  
+       `npm install`  
+   1.4 Run the project:  
+       `npm start`  
+       
+       The application will be available at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Backend**  
+   2.1 Clone the backend repository:  
+       `git clone https://github.com/OlenaBoichenko/Candles_backend`  
+   2.2 Go to your project folder:  
+       `cd candles_backend`  
+   2.3 Install dependencies:  
+       `npm install`  
+   2.4 Set up your database connection in the `.env` file:  
+       `MONGO_URI=your-url-for-connecting-to-the-database`  
+   2.5 Run the server:  
+       `npm start`  
+       
+       The server will be available at http://localhost:5000.
 
-### `npm run build`
+3. **Stripe**  
+   3.1 Clone the Stripe repository:  
+       `git clone https://github.com/OlenaBoichenko/Candles_stripe`  
+   3.2 Go to your project folder:  
+       `cd stripe`  
+   3.3 Install dependencies:  
+       `npm install`  
+   3.4 Set up the `.env` file with your Stripe API key:  
+       `STRIPE_SECRET_KEY=your-secret-key-stripe`  
+   3.5 Run the server:  
+       `npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# NOTES
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Netlify и MongoDB:** The project uses free plans from Netlify for hosting and MongoDB for the database. Because of this, there may be delays in the operation of the backend and payment system Stripe. In some cases, especially when starting for the first time, loading may take up to 1 minute.
+2. **Test credit card for Stripe verification.** To test the payment system, use the following test data:
+   - Card number: 4242 4242 4242 4242
+   - CVC: any three digits (for example, 123)
+   - Card expiration date: any future month and year (for example, 12/25)
 
-### `npm run eject`
+After entering this data, the payment will be successfully processed in test mode.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have questions or suggestions, you can contact me [via email](mailto:ol.boichenko.dev@gmail.com) 
